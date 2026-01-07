@@ -316,11 +316,6 @@ npm run build
 Create a `.env` file in the `eLibrary_service/` directory with the following variables:
 
 ```env
-# Database
-SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/elibrary_service
-SPRING_DATASOURCE_USERNAME=root
-SPRING_DATASOURCE_PASSWORD=root
-
 # JWT
 JWT_SIGNER_KEY=your-secret-key-here-minimum-256-bits
 
