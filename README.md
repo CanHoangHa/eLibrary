@@ -1,76 +1,174 @@
-# 📚 eLibrary - Hệ thống Thư viện Điện tử
+# 📚 eLibrary - Electronic Library System
 
-Dự án eLibrary là một hệ thống quản lý thư viện điện tử hiện đại, cho phép người dùng đọc sách trực tuyến, mượn sách, đánh giá sách và quản lý gói đăng ký. Dự án được xây dựng với kiến trúc microservices, sử dụng Spring Boot cho backend và React cho frontend.
+<div align="center">
 
-## 🎯 Tính năng chính
+![Java](https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.5-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![React](https://img.shields.io/badge/React-19.x-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Docker](https://img.shields.io/badge/Docker-24.x-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-8.x-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-7.x-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Elasticsearch](https://img.shields.io/badge/Elasticsearch-8.x-005571?style=for-the-badge&logo=elasticsearch&logoColor=white)
 
-### Quản lý Sách
-- Tìm kiếm sách với Elasticsearch
-- Xem chi tiết sách
-- Lọc sách theo danh mục, ngôn ngữ
-- Đánh giá và xếp hạng sách
-- Xem sách mới nhất
+</div>
 
-### Quản lý Người dùng
-- Đăng ký/Đăng nhập
-- Xác thực email với OTP
-- OAuth2 (Google, GitHub)
-- Quản lý profile
-- Quên mật khẩu
 
-### Mượn sách
-- Mượn sách trực tuyến
-- Gia hạn thời gian mượn
-- Tự động kiểm tra hạn mượn
+The eLibrary project is a modern electronic library management system that allows users to read books online, borrow books, rate books, and manage subscription plans.
 
-### Gói đăng ký
-- Xem các gói đăng ký
-- Đăng ký gói với VNPay
-- Quản lý gói đăng ký của người dùng
-- Tự động gia hạn/hủy gói
+The backend is built with Spring Boot following a modular architecture and is integrated with MySQL, Redis, and Elasticsearch for data persistence, caching, and search functionality.  
+The frontend is developed using React, providing a responsive and intuitive user interface for end users.
 
-### Thanh toán
-- Tích hợp VNPay
-- Xử lý callback thanh toán
-- Lịch sử thanh toán
 
-## 🛠️ Công nghệ sử dụng
+## 🎯 Key Features
+
+### Book Management
+
+* Search books using Elasticsearch
+* View book details
+* Filter books by category and language
+* Rate and review books
+* View new arrivals
+
+### User Management
+
+* Registration/Login
+* Email verification with OTP
+* OAuth2 (Google, GitHub)
+* Profile management
+* Forgot password
+
+### Borrowing
+
+* Borrow books online
+* Renew loan periods
+* Automatic overdue checks
+
+### Subscription Plans
+
+* View subscription plans
+* Subscribe via VNPay
+* Manage user subscriptions
+* Automatic renewal/cancellation
+
+### Payment
+
+* VNPay integration
+* Payment callback handling
+* Payment history
+
+## 📸 Screenshots
+
+### 🔐 Authentication
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="./screenshots/login.png" width="320" alt="Login Screen"/><br/>
+      <b>Login</b>
+    </td>
+    <td align="center">
+      <img src="./screenshots/register.png" width="320" alt="Register Screen"/><br/>
+      <b>Register</b>
+    </td>
+  </tr>
+</table>
+
+---
+
+### 📚 Library Browsing
+
+<p align="center">
+  <img src="./screenshots/homepage.png" width="700" alt="Home Page"/>
+  <br/>
+  <i>Browse Library (Home)</i>
+</p>
+
+<p align="center">
+  <img src="./screenshots/searchbook.png" width="700" alt="Search Page"/>
+  <br/>
+  <i>Search Books with Elasticsearch</i>
+</p>
+
+<p align="center">
+  <img src="./screenshots/bookdetail.png" width="700" alt="Book Detail"/>
+  <br/>
+  <i>View Book Details</i>
+</p>
+
+---
+
+### 📖 Borrowing Flow
+
+<p align="center">
+  <img src="./screenshots/borrowbook.png" width="700" alt="Borrow Modal"/>
+  <br/>
+  <i>Borrowing Process</i>
+</p>
+
+<p align="center">
+  <img src="./screenshots/borrowbooklist.png" width="700" alt="Borrow List"/>
+  <br/>
+  <i>View Borrowed Books</i>
+</p>
+
+---
+
+### 👤 User & Subscription
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="./screenshots/subscriptionplan.png" width="320" alt="Plans"/><br/>
+      <b>Subscription Plans</b>
+    </td>
+    <td align="center">
+      <img src="./screenshots/vnpay.png" width="320" alt="Payment"/><br/>
+      <b>VNPay Payment</b>
+    </td>
+  </tr>
+</table>
+
+
+## 🛠️ Technologies Used
 
 ### Backend
-- **Framework**: Spring Boot 3.5.5
-- **Java**: 21
-- **Database**: MySQL 8.1.0
-- **Cache**: Redis
-- **Search Engine**: Elasticsearch 8.15.3
-- **ORM**: Spring Data JPA / Hibernate
-- **Security**: Spring Security, OAuth2, JWT
-- **API Documentation**: SpringDoc OpenAPI (Swagger)
-- **Mapping**: MapStruct
-- **Build Tool**: Maven
-- **Email**: Spring Mail
-- **Payment**: VNPay Integration
+
+* **Framework**: Spring Boot 3.5.5
+* **Java**: 21
+* **Database**: MySQL 8.1.0
+* **Cache**: Redis
+* **Search Engine**: Elasticsearch 8.15.3
+* **ORM**: Spring Data JPA / Hibernate
+* **Security**: Spring Security, OAuth2, JWT
+* **API Documentation**: SpringDoc OpenAPI (Swagger)
+* **Mapping**: MapStruct
+* **Build Tool**: Maven
+* **Email**: Spring Mail
+* **Payment**: VNPay Integration
 
 ### Frontend
-- **Framework**: React 19.1.1
-- **Build Tool**: Vite 7.1.7
-- **Routing**: React Router DOM 7.9.3
-- **Testing**: Vitest 4.0.8, React Testing Library
-- **Linting**: ESLint
-- **Infinite Scroll**: react-infinite-scroll-component
+
+* **Framework**: React 19.1.1
+* **Build Tool**: Vite 7.1.7
+* **Routing**: React Router DOM 7.9.3
+* **Testing**: Vitest 4.0.8, React Testing Library
+* **Linting**: ESLint
+* **Infinite Scroll**: react-infinite-scroll-component
 
 ### DevOps
-- **Containerization**: Docker, Docker Compose
-- **Web Server**: Nginx (cho frontend)
 
-## 📁 Cấu trúc dự án
+* **Containerization**: Docker, Docker Compose
+* **Web Server**: Nginx (for frontend)
+
+## 📁 Project Structure
 
 ```
 Doancnpm/
-├── eLibrary_service/          # Backend Spring Boot
+├── eLibrary_service/           # Backend Spring Boot
 │   ├── src/
 │   │   ├── main/
 │   │   │   ├── java/com/cnpm/eLibrary_service/
-│   │   │   │   ├── configuration/    # Cấu hình (Security, OAuth2, JWT, VNPay)
+│   │   │   │   ├── configuration/    # Configuration (Security, OAuth2, JWT)
 │   │   │   │   ├── controller/       # REST Controllers
 │   │   │   │   ├── dto/              # Data Transfer Objects
 │   │   │   │   ├── entity/           # JPA Entities
@@ -88,134 +186,140 @@ Doancnpm/
 │   ├── docker/
 │   │   └── mysql/
 │   │       └── init.sql              # Database Initialization
-│   ├── dockerfile                    # Dockerfile cho backend
-│   ├── docker-compose.yml            # Docker Compose cho backend
+│   ├── dockerfile                    # Dockerfile for backend
+│   ├── docker-compose.yml            # Docker Compose for backend
 │   └── pom.xml                       # Maven Dependencies
 │
 ├── eLibrary_UI/                      # Frontend React
 │   ├── src/
 │   │   ├── components/               # React Components
-│   │   │   ├── AuthForm/            # Authentication Forms
-│   │   │   ├── Book/                # Book Components
-│   │   │   ├── Home/                # Home Components
-│   │   │   └── UserProfile/         # User Profile Components
-│   │   ├── pages/                   # Page Components
-│   │   ├── utils/                   # Utility Components
-│   │   ├── verification/            # OAuth & Payment Pages
-│   │   └── test/                    # Test Files
-│   ├── dockerfile                    # Dockerfile cho frontend
+│   │   │   ├── AuthForm/             # Authentication Forms
+│   │   │   ├── Book/                 # Book Components
+│   │   │   ├── Home/                 # Home Components
+│   │   │   └── UserProfile/          # User Profile Components
+│   │   ├── pages/                    # Page Components
+│   │   ├── utils/                    # Utility Components
+│   │   ├── verification/             # OAuth & Payment Pages
+│   │   └── test/                     # Test Files
+│   ├── dockerfile                    # Dockerfile for frontend
 │   ├── nginx.conf                    # Nginx Configuration
 │   ├── vite.config.js                # Vite Configuration
 │   └── package.json                  # NPM Dependencies
 │
-├── docker-compose.yml                # Docker Compose chính (tất cả services)
-└── README.md                         # File này
+├── docker-compose.yml                # Main Docker Compose (all services)
+└── README.md                         # This file
 ```
 
-## 📋 Yêu cầu hệ thống
+## 📋 System Requirements
 
-- **Java**: JDK 21 hoặc cao hơn
-- **Node.js**: 18.x hoặc cao hơn
-- **Maven**: 3.8+ (hoặc sử dụng Maven Wrapper)
-- **Docker**: 20.10+ và Docker Compose 2.0+
-- **MySQL**: 8.1.0+ (hoặc sử dụng Docker)
-- **Redis**: Latest (hoặc sử dụng Docker)
-- **Elasticsearch**: 8.15.3+ (hoặc sử dụng Docker)
+* **Java**: JDK 21 or higher
+* **Node.js**: 18.x or higher
+* **Maven**: 3.8+ (or use Maven Wrapper)
+* **Docker**: 20.10+ and Docker Compose 2.0+
+* **MySQL**: 8.1.0+ (or use Docker)
+* **Redis**: Latest (or use Docker)
+* **Elasticsearch**: 8.15.3+ (or use Docker)
 
-## 🚀 Cài đặt và Chạy dự án
+## 🚀 Installation and Setup
 
-### Cách 1: Chạy với Docker Compose (Khuyến nghị)
+### Method 1: Running with Docker Compose (Recommended)
 
-1. **Clone repository**
+1. **Clone the repository**
+
 ```bash
 git clone <repository-url>
 cd Doancnpm
 ```
 
-2. **Tạo file `.env` cho backend**
+2. **Create `.env` file for backend**
+
 ```bash
 cd eLibrary_service
-# Tạo file .env với các biến môi trường cần thiết (xem phần Environment Variables)
+# Create .env file with necessary environment variables (see Environment Variables section)
 ```
 
-3. **Chạy tất cả services với Docker Compose**
+3. **Run all services with Docker Compose**
+
 ```bash
 cd ..
 docker-compose up -d
 ```
 
-Các services sẽ chạy trên các port:
-- **Backend API**: http://localhost:8080
-- **Frontend**: http://localhost:5173
-- **MySQL**: localhost:3306
-- **Redis**: localhost:6379
-- **Elasticsearch**: http://localhost:9200
-- **Kibana**: http://localhost:5601
+**Services status:**
 
-4. **Kiểm tra logs**
+* **Frontend (Web UI)**: `http://localhost:5173`
+* **API Documentation (Swagger)**: `http://localhost:8080/swagger-ui.html`
+* **Backend Server**: Running on port `8080`
+
+
+
+**Check logs**
+
 ```bash
 docker-compose logs -f
 ```
 
-### Cách 2: Chạy thủ công (Development)
+### Method 2: Manual Setup (Development)
 
 #### Backend
 
-1. **Cài đặt MySQL, Redis, Elasticsearch**
-   - Hoặc chạy chỉ các services này với Docker:
-   ```bash
-   docker-compose up -d elibrary-db elibrary-redis elibrary-es
-   ```
+1. **Install MySQL, Redis, Elasticsearch**
+* Or run only these services with Docker:
 
-2. **Cấu hình file `.env`**
-   ```bash
-   cd eLibrary_service
-   # Tạo file .env với các biến môi trường
-   ```
+```bash
+docker-compose up -d elibrary-db elibrary-redis elibrary-es
+```
 
-3. **Chạy Spring Boot**
-   ```bash
-   # Sử dụng Maven Wrapper
-   ./mvnw spring-boot:run
-   
-   # Hoặc sử dụng Maven
-   mvn spring-boot:run
-   ```
+
+2. **Configure `.env` file**
+```bash
+cd eLibrary_service
+# Create .env file with environment variables
+```
+
+
+3. **Run Spring Boot**
+```bash
+# Using Maven Wrapper
+./mvnw spring-boot:run
+
+# Or using Maven
+mvn spring-boot:run
+```
+
+
 
 #### Frontend
 
-1. **Cài đặt dependencies**
-   ```bash
-   cd eLibrary_UI
-   npm install
-   ```
+1. **Install dependencies**
+```bash
+cd eLibrary_UI
+npm install
+```
 
-2. **Chạy development server**
-   ```bash
-   npm run dev
-   ```
 
-3. **Build production**
-   ```bash
-   npm run build
-   ```
+2. **Run development server**
+```bash
+npm run dev
+```
 
-## 🔧 Biến môi trường
 
-Tạo file `.env` trong thư mục `eLibrary_service/` với các biến sau:
+3. **Build for production**
+```bash
+npm run build
+```
+
+
+
+## 🔧 Environment Variables
+
+Create a `.env` file in the `eLibrary_service/` directory with the following variables:
 
 ```env
 # Database
-SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/eLibrary_service
+SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/elibrary_service
 SPRING_DATASOURCE_USERNAME=root
 SPRING_DATASOURCE_PASSWORD=root
-
-# Redis
-SPRING_DATA_REDIS_HOST=localhost
-SPRING_DATA_REDIS_PORT=6379
-
-# Elasticsearch
-SPRING_ELASTICSEARCH_URIS=http://localhost:9200
 
 # JWT
 JWT_SIGNER_KEY=your-secret-key-here-minimum-256-bits
@@ -237,101 +341,206 @@ VNPAY_TMN_CODE=your-tmn-code
 VNPAY_HASH_SECRET=your-hash-secret
 ```
 
-## 📚 API Documentation
-
-Sau khi chạy backend, truy cập Swagger UI tại:
-- **Swagger UI**: http://localhost:8080/swagger-ui.html
-- **API Docs (JSON)**: http://localhost:8080/api-docs
-
 ## 🧪 Testing
 
 ### Backend Tests
+
 ```bash
 cd eLibrary_service
 ./mvnw test
 ```
 
 ### Frontend Tests
+
 ```bash
 cd eLibrary_UI
-npm test              # Chạy tests một lần
-npm run test:watch    # Chạy tests ở chế độ watch
-npm run test:ui       # Chạy tests với UI
+npm test              # Run tests once
+npm run test:watch    # Run tests in watch mode
+npm run test:ui       # Run tests with UI
 ```
 
-## 🌿 Cấu trúc Branch
+## 📦 Main API Endpoints
 
-Dự án có 3 branch chính:
+All backend APIs are prefixed with **`/api`** and documented using **Swagger (OpenAPI)**.
 
-- **`feature/core`**: Chứa logic backend (Spring Boot)
-- **`UI`**: Chứa giao diện frontend (React)
-- **`test`**: Chứa tất cả các chức năng và được chạy thông qua `docker-compose.yml`
+### 🔐 Authentication & Authorization
 
-## 📦 API Endpoints chính
+The system supports JWT-based authentication and OAuth2 login.
 
-### Authentication
-- `POST /api/auth/login` - Đăng nhập
-- `POST /api/auth/register` - Đăng ký
-- `POST /api/auth/refresh` - Làm mới token
-- `POST /api/auth/logout` - Đăng xuất
-- `GET /oauth2/authorization/{provider}` - OAuth2 login (google, github)
+* User login, logout, and token refresh
+* Token introspection
+* Email-based password recovery (OTP & reset link)
+* OAuth2 registration completion (Google, GitHub)
 
-### Books
-- `GET /api/books` - Lấy danh sách sách
-- `GET /api/books/{id}` - Lấy chi tiết sách
-- `GET /api/books/search` - Tìm kiếm sách
-- `GET /api/books/new` - Lấy sách mới nhất
-- `GET /api/books/filter` - Lọc sách
+Main endpoints:
 
-### Borrow
-- `POST /api/borrow` - Mượn sách
-- `GET /api/borrow` - Lấy danh sách mượn
-- `POST /api/borrow/renew` - Gia hạn mượn
+* `/auth/login`
+* `/auth/logout`
+* `/auth/refresh`
+* `/auth/forgot-password`
+* `/auth/reset-password`
+* `/auth/complete-oauth-register`
 
-### Categories
-- `GET /api/categories` - Lấy danh sách danh mục
+---
 
-### Payment
-- `POST /api/payment/create` - Tạo thanh toán
-- `POST /api/payment/vnpay-callback` - Callback từ VNPay
+### 👤 User Management & Verification
 
-### Subscription
-- `GET /api/subscription-plans` - Lấy danh sách gói đăng ký
-- `POST /api/user-subscription/subscribe` - Đăng ký gói
+User accounts are fully managed with role-based access control and email verification.
 
-### User
-- `GET /api/users/profile` - Lấy thông tin profile
-- `PUT /api/users/profile` - Cập nhật profile
+* User CRUD operations
+* Get current logged-in user information
+* Email verification via OTP
+* Resend verification email
+* Update user email before verification
 
-## 🔐 Bảo mật
+Main endpoints:
 
-- JWT Authentication với access token và refresh token
-- OAuth2 với Google và GitHub
-- Spring Security cho authorization
-- Password encryption với BCrypt
-- CORS configuration
-- Email verification với OTP
+* `/user`
+* `/user/{id}`
+* `/user/my-info`
+* `/verify/email`
+* `/verify/otp/ttl`
 
-## 📝 Lưu ý
+---
 
-- Đảm bảo các services (MySQL, Redis, Elasticsearch) đã chạy trước khi start backend
-- Cần cấu hình đúng các biến môi trường trong file `.env`
-- VNPay cần cấu hình IPN URL (có thể sử dụng ngrok cho development)
-- Elasticsearch cần thời gian khởi động, đợi vài giây sau khi container start
+### 📚 Book Management
 
+Books are managed and indexed using **Elasticsearch** for fast searching and filtering.
+
+* Create, update, delete books
+* View book details and new arrivals
+* Full-text search with Elasticsearch
+* Filter books by category
+* Upload book covers
+
+Main endpoints:
+
+* `/book`
+* `/book/{id}`
+* `/book/new`
+* `/book/search`
+* `/book/filter`
+* `/book/upload/{id}`
+
+---
+
+### 🏷️ Category Management
+
+Categories are used to organize books in the library.
+
+* Create, update, delete categories
+* View all available categories
+
+Main endpoints:
+
+* `/category`
+* `/category/{id}`
+
+---
+
+### ⭐ Book Rating
+
+Users can rate books and update or remove their ratings.
+
+* Rate a book
+* Remove a rating
+
+Main endpoints:
+
+* `/rating/{userId}/{bookId}`
+
+---
+
+### 📖 Borrowing System
+
+The borrowing module allows users to borrow and manage book loans.
+
+* Borrow books online
+* Renew borrowing period
+* Return borrowed books
+* View borrowing history
+
+Main endpoints:
+
+* `/borrow`
+* `/borrow/{id}/renew`
+* `/borrow/{id}/return`
+* `/borrow/user/{userId}`
+
+---
+
+### 💳 Payment (VNPay Integration)
+
+VNPay is integrated to handle subscription payments securely.
+
+* Create VNPay payment requests
+* Handle VNPay callback responses
+
+Main endpoints:
+
+* `/payment/create-payment`
+* `/payment/vnpay-callback`
+
+---
+
+### 📦 Subscription Management
+
+The system supports paid subscription plans for enhanced access.
+
+* View available subscription plans
+* Subscribe or cancel a subscription
+* Manage user subscriptions
+
+Main endpoints:
+
+* `/subscription-plan`
+* `/subscription-plan/{id}`
+* `/subscriptions/subscribe`
+* `/subscriptions/cancel/{userId}`
+* `/subscriptions/user/{userId}`
+
+---
+
+## 📚 API Documentation
+
+After running the backend, access Swagger UI at:
+
+* **Swagger UI**: http://localhost:8080/swagger-ui.html
+* **API Docs (JSON)**: http://localhost:8080/v3/api-docs
+  
+## 🔐 Security
+
+* JWT Authentication with access token and refresh token
+* OAuth2 with Google and GitHub
+* Spring Security for authentication and authorization
+* Password encryption with BCrypt
+* CORS configuration
+* Email verification with OTP
+
+## 📝 Notes
+
+* Ensure services (MySQL, Redis, Elasticsearch) are running before starting the backend.
+* Make sure environment variables are correctly configured in the `.env` file.
+* VNPay requires IPN URL configuration (can use ngrok for development).
+* Elasticsearch needs time to start up; wait a few seconds after the container starts.
 
 ## 📄 License
 
-Dự án này được phát triển cho mục đích học tập và nghiên cứu.
+This project is developed for educational purposes and personal portfolio demonstration.
 
-## 👥 Tác giả
+## 👤 Contributors & Role
 
-Dự án được phát triển bởi:
-1. Nguyễn Vũ Hoàng - 2311069
-2. Đoàn Minh Đức - 2310767
-3. Cấn Hoàng Hà - 2310836
-4. Ngọ Văn Hiệp - 2311007
-5. Lê Vũ Minh Hiếu - 2310953
----
+### Can Hoang Ha – Backend Developer
+- Designed and implemented a **modular backend architecture** using **Spring Boot**
+- Developed **RESTful APIs** for authentication, book management, borrowing, subscriptions, and payments
+- Integrated **MySQL**, **Redis**, and **Elasticsearch**
+- Implemented **JWT-based authentication**, **OAuth2 (Google, GitHub)**, and role-based access control
+- Integrated **VNPay** payment workflow and callback handling
+- Wrote **unit tests and integration tests** for backend services and controllers
+- Documented APIs using **Swagger (OpenAPI)**
 
-
+### Team Context
+- **Nguyen Vu Hoang** – Frontend development 
+- **Doan Minh Duc** – Frontend testing
+- **Ngo Van Hiep** - Documentation & Analysis
+- **Le Vu Minh Hieu** – Documentation & Analysis
